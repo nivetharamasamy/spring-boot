@@ -84,11 +84,13 @@ public class UserController {
         userService.deleteUserById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-    @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE, headers="Accept=application/json")
-    public int getUserlogin(@RequestBody User username)  {
+   @PostMapping(value = "/login", produces = MediaType.APPLICATION_JSON_VALUE, headers="Accept=application/json")
+    public int getUserlogin(@RequestParam String username,@RequestParam String password)  {
         System.out.println("happy ending");
         System.out.println(username);
-        int User=userService.Userlogin(username);
+        System.out.println(password);
+        System.out.println("happy starting");
+        int User=userService.Userlogin(username,password);
        
         return User;
     }
