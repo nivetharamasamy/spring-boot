@@ -57,18 +57,25 @@ public User createUser(User user) {
     }
 
     @Override
-      public int Userlogin(String user,String password) {
-       
-        boolean isExists = userrepo.existsByUsernameAndPassword(user,password);
+    public User Userlogin(User user) {
+        User result= new User();
+        String name=user.getUsername();
+        String password=user.getPassword();
+        boolean isExists = userrepo.existsByUsernameAndPassword(name,password);
         if (!isExists) {
-           log=0;
+           result=null;
             }
             else{
                 log=1; 
+               result.setUsername(name);
+               result.setPassword(password);
             }
+            return result;
        
-        return log;
+       
     }
+
+    
 
  
 }
