@@ -10,5 +10,5 @@ public interface UserService {
     public User findByUserId(Long id);
     public User updateUser(Long id,User username);
     public void deleteUserById(Long id); 
-    public int Userlogin(String username,String password);
+     public User Userlogin(User username);
 }
