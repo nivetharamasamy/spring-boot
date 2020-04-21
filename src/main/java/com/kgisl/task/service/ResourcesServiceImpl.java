@@ -14,19 +14,15 @@ import com.kgisl.task.repository.ResRepo;
 @Transactional
 public class ResourcesServiceImpl implements ResourcesService {
 
-
+ Resources res = new Resources();
+	
     @Autowired
     ResRepo resrepo;
 
 
 
-    Resources resources = new Resources();
-
-
     @Override
-    
-
-    public List<Resources> getRes() {
+        public List<Resources> getRes() {
       return resrepo.findAll();
     }
 
@@ -35,13 +31,13 @@ public class ResourcesServiceImpl implements ResourcesService {
 	
               
 
-                resources.setName(res.getName());
-                resources.setType(res.getType());
-                resources.setUrl(res.getUrl());
-                resources.setTech(res.getTech());
+                res.setName(res.getName());
+                res.setType(res.getType());
+                res.setUrl(res.getUrl());
+                res.setTech(res.getTech());
 
 
-                 return resrepo.save(resources);
+                 return resrepo.save(res);
 	}
         
     }
