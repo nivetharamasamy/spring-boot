@@ -1,12 +1,15 @@
 package com.kgisl.task.entity;
 
-import java.util.Optional;
+import java.util.List;
 
-import javax.annotation.Generated;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -25,6 +28,29 @@ private  String username;
 private String usermailid;
 private String password;
     
+
+@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+	@JoinColumn(name = "userid")
+	private List<Resources> lists;
+
+
+/**
+ * @return the lists
+ */
+
+ /**
+  * @return the lists
+  */
+ public List<Resources> getLists() {
+     return lists;
+ }
+ /**
+  * @param lists the lists to set
+  */
+ public void setLists(List<Resources> lists) {
+     this.lists = lists;
+ }
+
 
 
 /**
@@ -77,12 +103,7 @@ public void setUsername(String username) {
   public void setUserid(Long userid) {
       this.userid = userid;
   }
-public Optional<User> findByUserId(Long id) {
-	return null;
-}
-public User save(User existingVehicle) {
-	return null;
-}
+
 
 public User(Long userid,String username,String usermailid) {
     this.username = username;
