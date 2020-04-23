@@ -27,9 +27,7 @@ public class Resources {
     private String tech;
 
 
-    @ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "userid", updatable = false, insertable = true)
-	private User user;
+   
 
     /**
      * @return the name
