@@ -29,27 +29,27 @@ private String usermailid;
 private String password;
     
 
-@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-	@JoinColumn(name = "userid")
-	private List<Resources> lists;
+// @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+// 	@JoinColumn(name = "userid")
+// 	private List<Resources> lists;
 
 
-/**
- * @return the lists
- */
+// /**
+//  * @return the lists
+//  */
 
- /**
-  * @return the lists
-  */
- public List<Resources> getLists() {
-     return lists;
- }
- /**
-  * @param lists the lists to set
-  */
- public void setLists(List<Resources> lists) {
-     this.lists = lists;
- }
+//  /**
+//   * @return the lists
+//   */
+//  public List<Resources> getLists() {
+//      return lists;
+//  }
+//  /**
+//   * @param lists the lists to set
+//   */
+//  public void setLists(List<Resources> lists) {
+//      this.lists = lists;
+//  }
 
 
 
