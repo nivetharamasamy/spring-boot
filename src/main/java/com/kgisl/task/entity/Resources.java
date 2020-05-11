@@ -25,7 +25,7 @@ public class Resources {
     private String type;
     private String url;
     private String tech;
-
+ private String image;
 
    
 
@@ -52,6 +52,13 @@ public class Resources {
         return tech;
     }
 
+     public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
     /**
      * @return the type
      */
