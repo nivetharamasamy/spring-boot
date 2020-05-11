@@ -35,7 +35,7 @@ public class ResourcesServiceImpl implements ResourcesService {
                 res.setType(res.getType());
                 res.setUrl(res.getUrl());
                 res.setTech(res.getTech());
-
+res.setImage(res.getImage());
 
                  return resrepo.save(res);
 	}
